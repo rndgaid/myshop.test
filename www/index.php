@@ -1,9 +1,9 @@
 <?php
 
-$controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Index';
-echo 'Подключаемый php-файл (Контроллер) = ' . $controllerName . '<br>';
+include_once '../config/config.php';
+include_once '../libary/mainFunctions.php';
 
-$actionName = isset($_GET['action']) ? ucfirst($_GET['action']) : 'index';
-echo 'Функция формирующая страницу (Экшн) = ' . $actionName . '<br>';
+$controllerName = ucfirst($_GET['controller'] ?? 'index');
+$actionName = $_GET['action'] ?? 'index';
 
-include_once '../controllers/' . $controllerName . 'Controller.php';
+loadPage($controllerName, $actionName);
