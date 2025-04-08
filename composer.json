@@ -1,0 +1,11 @@
+{
+    "name": "rndgaid/myshop",
+    "description": "A simple online store",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^3.12"
+    }
+}
